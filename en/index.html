@@ -11,53 +11,152 @@
 <link rel="icon" href="../favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="../logo.png">
 <link rel="alternate" hreflang="it" href="../index.html">
+<link rel="preload" href="../caratteri/Fraunces-700.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="stylesheet" href="../stile.css">
 </head>
-<body>
+<body class="page-index">
 <a class="skip" href="#contenuto">Skip to content</a>
 <header class="top">
   <div class="wrap top-row">
-    <a class="brand" href="index.html"><img src="../logo.png" alt="" width="40" height="40"><span>GustOH</span></a>
-    <a class="lang" href="../index.html" hreflang="it" lang="it">Italiano</a>
+    <a class="brand" href="index.html" aria-current="page"><img src="../logo.png" alt="" width="36" height="36"><span>GustOH</span></a>
+    <nav class="nav" aria-label="Home">
+      <a href="supporto.html">Support</a>
+      <a class="opt" href="privacy.html">Privacy</a>
+      <a class="opt" href="termini.html">Terms</a>
+      <a class="lang" href="../index.html" hreflang="it" lang="it">Italiano</a>
+    </nav>
   </div>
-  <nav class="wrap nav" aria-label="Home"><a href="supporto.html">Support</a><a href="privacy.html">Privacy</a><a href="termini.html">Terms</a><a href="elimina-account.html">Delete account</a></nav>
 </header>
-<main id="contenuto" class="wrap">
+<main id="contenuto">
 <section class="hero">
-  <img class="hero-logo" src="../logo.png" alt="GustOH" width="112" height="112">
-  <p class="kicker">Italian home cooking</p>
-  <h1>Your kitchen, organised.</h1>
-  <p class="lead">GustOH brings order to your kitchen: step-by-step recipes, weekly meals, shopping list and pantry, all in one app.</p>
-  <p class="soon">Coming soon to the App Store and Google Play.</p>
-</section>
-<section aria-labelledby="cosa-fa">
-  <h2 id="cosa-fa">What it does</h2>
-  <ul class="grid">
-    <li class="card"><h3>Step-by-step recipes</h3><p>Traditional Italian recipes explained in plain words, with guided cooking mode: one step at a time, with timers.</p></li>
-    <li class="card"><h3>Weekly meals</h3><p>Plan what to eat over the next few days and see it all at a glance.</p></li>
-    <li class="card"><h3>Shopping and pantry</h3><p>A shopping list sorted by aisle and a pantry that tells you when something is running low.</p></li>
-    <li class="card"><h3>&quot;Dinner at…&quot;</h3><p>Tell the app when you want to eat and it tells you when to start cooking.</p></li>
-    <li class="card"><h3>AI chef</h3><p>Ask for a dish or tidy up one of your recipes. Adults only; answers may contain mistakes and we always say so.</p></li>
-    <li class="card"><h3>Courses and community</h3><p>Short lessons on techniques and kitchen tools, and a community to share your home cooking.</p></li>
-  </ul>
-</section>
-<section class="two">
-  <div class="card">
-    <h2>Made for everyone</h2>
-    <ul class="ticks"><li>People who have never cooked</li><li>People who cook every day</li><li>People who train and follow a plan</li><li>People who cook like a chef</li></ul>
-  </div>
-  <div class="card">
-    <h2>Your data is yours</h2>
-    <ul class="ticks"><li>No automatic ads: sponsored content is always labelled &quot;Advertising&quot;.</li><li>Export your recipes and data whenever you like.</li><li>Delete your account and data with one tap.</li><li>Servers in the European Union.</li></ul>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1>Your kitchen, organised.</h1>
+      <p class="lead">GustOH brings order to home cooking: step-by-step recipes, weekly meals, shopping list and pantry. All in one app, in English and Italian.</p>
+      <p class="soon">Coming soon to the App Store and Google Play.</p>
+    </div>
+    <div class="hero-phones">
+      <figure class="phone phone-back"><picture><source srcset="../img/home-scuro.webp" media="(prefers-color-scheme: dark)"><img src="../img/home-chiaro.webp" alt="GustOH Home with today's lunch and when to start cooking" width="390" height="844" fetchpriority="high" decoding="async"></picture></figure>
+      <figure class="phone phone-front"><picture><source srcset="../img/settimana-scuro.webp" media="(prefers-color-scheme: dark)"><img src="../img/settimana-chiaro.webp" alt="The weekly meal plan, day by day" width="390" height="844" fetchpriority="high" decoding="async"></picture></figure>
+    </div>
   </div>
 </section>
-<p class="note">Some features require a Premium subscription, with a 7-day trial: length and price are shown before you start.</p>
+
+<section class="clock" aria-labelledby="orari">
+  <div class="wrap clock-grid">
+    <div class="clock-copy">
+      <h2 id="orari">Tell us when you want to eat. We tell you when to start.</h2>
+      <p>Every recipe knows its timings. Pick the time you sit down and GustOH tells you when to turn on the stove, step by step.</p>
+    </div>
+    <figure class="timeline">
+      <figcaption>Spaghetti with tomato and basil, for 2</figcaption>
+      <ol>
+        <li><time>12:30</time><span>Put the water on</span></li>
+        <li><time>12:35</time><span>Make the sauce</span></li>
+        <li><time>12:50</time><span>Drop the pasta</span></li>
+        <li class="end"><time>13:00</time><span>Lunch is served</span></li>
+      </ol>
+    </figure>
+  </div>
+</section>
+
+<section class="row">
+  <div class="wrap row-grid">
+    <div class="row-copy">
+      <h2>Recipes explained the way someone at home would</h2>
+      <p>Traditional Italian recipes in plain words. Servings rescale, timings are clear, and guided cooking shows one step at a time, with that step's ingredients and a timer.</p>
+    </div>
+    <div class="row-phones">
+      <figure class="phone phone-back"><picture><source srcset="../img/ricetta-scuro.webp" media="(prefers-color-scheme: dark)"><img src="../img/ricetta-chiaro.webp" alt="The aubergine parmigiana recipe with times and servings" width="390" height="844" loading="lazy" decoding="async"></picture></figure>
+      <figure class="phone phone-front"><picture><source srcset="../img/cucina-scuro.webp" media="(prefers-color-scheme: dark)"><img src="../img/cucina-chiaro.webp" alt="Guided cooking: one step at a time, with a timer" width="390" height="844" loading="lazy" decoding="async"></picture></figure>
+    </div>
+  </div>
+</section>
+
+<section class="row row-flip">
+  <div class="wrap row-grid">
+    <div class="row-copy">
+      <h2>Your week, shopping and pantry talk to each other</h2>
+      <p>Plan the week's meals and the shopping list writes itself, sorted by aisle and without what you already have. The pantry tells you when something is running low.</p>
+    </div>
+    <div class="row-phones">
+      <figure class="phone phone-back"><picture><source srcset="../img/spesa-scuro.webp" media="(prefers-color-scheme: dark)"><img src="../img/spesa-chiaro.webp" alt="The shopping list sorted by aisle, with an estimated cost" width="390" height="844" loading="lazy" decoding="async"></picture></figure>
+      <figure class="phone phone-front"><picture><source srcset="../img/dispensa-scuro.webp" media="(prefers-color-scheme: dark)"><img src="../img/dispensa-chiaro.webp" alt="The pantry split into fridge, freezer and cupboard" width="390" height="844" loading="lazy" decoding="async"></picture></figure>
+    </div>
+  </div>
+</section>
+
+<section class="more" aria-labelledby="altro">
+  <div class="wrap">
+    <h2 id="altro">And also</h2>
+    <div class="more-grid">
+      <article><h3>An AI chef</h3><p>Ask for a dish with what you have, or tidy up one of your recipes. Adults only: answers may contain mistakes and we always say so.</p></article>
+      <article><h3>Short courses</h3><p>A few minutes per lesson on techniques and kitchen tools. At the end you try a real recipe.</p></article>
+      <article><h3>A home cooking community</h3><p>Share your dishes and cook other people's. Recipes with allergens you excluded never appear.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="paths" aria-labelledby="percorsi">
+  <div class="wrap">
+    <h2 id="percorsi">Made for anyone who cooks, at any level</h2>
+    <ul class="paths-grid">
+      <li><svg class="icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5C4 4.7 4.7 4 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5z"/><path d="M20 5.5c0-.8-.7-1.5-1.5-1.5H13v15h5.5c.8 0 1.5-.7 1.5-1.5z"/><path d="M11 19h2"/></svg><h3>Learn</h3><p>Start from zero: easy, guided recipes, one step at a time.</p></li>
+      <li><svg class="icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/><circle cx="8.5" cy="14.5" r="1"/><circle cx="12" cy="14.5" r="1"/></svg><h3>Get organised</h3><p>You cook every day: week, shopping and pantry in order.</p></li>
+      <li><svg class="icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14"/><path d="M5 19c3-4 6-7 10-9"/></svg><h3>Eat well</h3><p>You follow a plan or want to eat healthy and high-protein.</p></li>
+      <li><svg class="icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h16v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"/><path d="M2 10h2M20 10h2M9 6c0-1 1-1.5 1-2.5M13 6c0-1 1-1.5 1-2.5"/></svg><h3>Cook like a chef</h3><p>More ambitious dishes and dinners with guests, well timed.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="trust" aria-labelledby="dati">
+  <div class="wrap">
+    <h2 id="dati">Your data is yours.</h2>
+    <dl class="trust-grid">
+      <div><dt>No automatic ads</dt><dd>Sponsored content is rare and always labelled &quot;Advertising&quot;.</dd></div>
+      <div><dt>Export everything, any time</dt><dd>Your recipes, journal and lists, as text or PDF.</dd></div>
+      <div><dt>Delete everything in one tap</dt><dd>Account and data, from the app or by writing to us.</dd></div>
+      <div><dt>Servers in Europe</dt><dd>Accounts and data are stored in the European Union.</dd></div>
+    </dl>
+    <p class="plans">Some features need a Premium subscription. The trial lasts 7 days: length and price are shown before you start, and we remind you 2 days before it ends.</p>
+  </div>
+</section>
 </main>
 <footer class="foot">
-  <div class="wrap">
-    <p>GustOH is an app by Marketing Genetics S.r.l. · VAT no. IT04020560365 · Via Guido Baccelli 44, 41126 Modena (MO), Italy · <a href="https://www.marketinggenetics.it/" rel="noopener">Company website</a></p>
-    <p>Contact: <a href="mailto:supporto@gustoh.it">supporto@gustoh.it</a> · <a href="mailto:info@gustoh.it">info@gustoh.it</a></p>
-    <p class="foot-links"><a href="privacy.html">Privacy</a><a href="termini.html">Terms</a><a href="supporto.html">Support</a><a href="elimina-account.html">Delete account</a><a href="../index.html" hreflang="it" lang="it">Italiano</a></p>
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <a class="brand" href="index.html"><img src="../logo.png" alt="" width="36" height="36"><span>GustOH</span></a>
+      <p>Home cooking, organised.</p>
+    </div>
+    <div>
+      <h2>Help</h2>
+      <ul>
+        <li><a href="supporto.html">Support</a></li>
+        <li><a href="elimina-account.html">Delete account</a></li>
+        <li><a href="mailto:supporto@gustoh.it">supporto@gustoh.it</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Legal</h2>
+      <ul>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="termini.html">Terms</a></li>
+        <li><a href="mailto:info@gustoh.it">info@gustoh.it</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Company</h2>
+      <address>
+        GustOH is an app by<br><strong>Marketing Genetics S.r.l.</strong><br>
+        VAT no. IT04020560365<br>
+        Via Guido Baccelli 44, 41126 Modena (MO), Italy
+      </address>
+      <p><a href="https://www.marketinggenetics.it/" rel="noopener">Company website</a></p>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <p>© 2026 Marketing Genetics S.r.l.</p>
+    <a href="../index.html" hreflang="it" lang="it">Italiano</a>
   </div>
 </footer>
 </body>

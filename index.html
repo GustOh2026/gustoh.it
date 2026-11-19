@@ -11,53 +11,152 @@
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="logo.png">
 <link rel="alternate" hreflang="en" href="en/index.html">
+<link rel="preload" href="caratteri/Fraunces-700.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="stylesheet" href="stile.css">
 </head>
-<body>
+<body class="page-index">
 <a class="skip" href="#contenuto">Vai al contenuto</a>
 <header class="top">
   <div class="wrap top-row">
-    <a class="brand" href="index.html"><img src="logo.png" alt="" width="40" height="40"><span>GustOH</span></a>
-    <a class="lang" href="en/index.html" hreflang="en" lang="en">English</a>
+    <a class="brand" href="index.html" aria-current="page"><img src="logo.png" alt="" width="36" height="36"><span>GustOH</span></a>
+    <nav class="nav" aria-label="Home">
+      <a href="supporto.html">Assistenza</a>
+      <a class="opt" href="privacy.html">Privacy</a>
+      <a class="opt" href="termini.html">Termini</a>
+      <a class="lang" href="en/index.html" hreflang="en" lang="en">English</a>
+    </nav>
   </div>
-  <nav class="wrap nav" aria-label="Home"><a href="supporto.html">Assistenza</a><a href="privacy.html">Privacy</a><a href="termini.html">Termini</a><a href="elimina-account.html">Elimina account</a></nav>
 </header>
-<main id="contenuto" class="wrap">
+<main id="contenuto">
 <section class="hero">
-  <img class="hero-logo" src="logo.png" alt="GustOH" width="112" height="112">
-  <p class="kicker">La cucina di casa all'italiana</p>
-  <h1>La tua cucina, organizzata.</h1>
-  <p class="lead">GustOH mette in ordine quello che succede in cucina: ricette spiegate passo passo, la settimana dei pasti, la lista della spesa e la dispensa, tutto in un'unica app.</p>
-  <p class="soon">Presto su App Store e Google Play.</p>
-</section>
-<section aria-labelledby="cosa-fa">
-  <h2 id="cosa-fa">Cosa fa</h2>
-  <ul class="grid">
-    <li class="card"><h3>Ricette passo passo</h3><p>Ricette della tradizione italiana spiegate con parole semplici, con la modalità cucina guidata: un passaggio alla volta, con i timer.</p></li>
-    <li class="card"><h3>La settimana dei pasti</h3><p>Decidi cosa mangiare nei prossimi giorni e ritrova tutto a colpo d'occhio.</p></li>
-    <li class="card"><h3>Spesa e dispensa</h3><p>La lista della spesa divisa per reparto e la dispensa che ti avvisa quando qualcosa sta finendo.</p></li>
-    <li class="card"><h3>&quot;Mangio alle…&quot;</h3><p>Dici a che ora vuoi mangiare e l'app ti dice a che ora iniziare a cucinare.</p></li>
-    <li class="card"><h3>Chef con intelligenza artificiale</h3><p>Chiedi un piatto o metti in ordine una tua ricetta. Riservato ai maggiorenni; le risposte possono contenere errori e lo diciamo sempre.</p></li>
-    <li class="card"><h3>Corsi e community</h3><p>Lezioni brevi su tecniche e attrezzi di casa, e una community per condividere i piatti di casa tua.</p></li>
-  </ul>
-</section>
-<section class="two">
-  <div class="card">
-    <h2>Pensata per tutti</h2>
-    <ul class="ticks"><li>Chi non ha mai cucinato</li><li>Chi cucina ogni giorno</li><li>Chi si allena e segue un piano</li><li>Chi cucina da chef</li></ul>
-  </div>
-  <div class="card">
-    <h2>I tuoi dati sono tuoi</h2>
-    <ul class="ticks"><li>Nessuna pubblicità automatica: i contenuti sponsorizzati sono sempre segnalati come &quot;Pubblicità&quot;.</li><li>Esporti le tue ricette e i tuoi dati quando vuoi.</li><li>Cancelli l'account e i dati con un tocco.</li><li>Server nell'Unione Europea.</li></ul>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1>La tua cucina, organizzata.</h1>
+      <p class="lead">GustOH mette in ordine la cucina di casa: ricette spiegate passo passo, la settimana dei pasti, la lista della spesa e la dispensa. Tutto in un'app, in italiano e in inglese.</p>
+      <p class="soon">Presto su App Store e Google Play.</p>
+    </div>
+    <div class="hero-phones">
+      <figure class="phone phone-back"><picture><source srcset="img/home-scuro.webp" media="(prefers-color-scheme: dark)"><img src="img/home-chiaro.webp" alt="La Home di GustOH con il pranzo di oggi e l'ora in cui iniziare" width="390" height="844" fetchpriority="high" decoding="async"></picture></figure>
+      <figure class="phone phone-front"><picture><source srcset="img/settimana-scuro.webp" media="(prefers-color-scheme: dark)"><img src="img/settimana-chiaro.webp" alt="La settimana dei pasti, giorno per giorno" width="390" height="844" fetchpriority="high" decoding="async"></picture></figure>
+    </div>
   </div>
 </section>
-<p class="note">Alcune funzioni richiedono l'abbonamento Premium, con 7 giorni di prova: durata e prezzo sono indicati prima di iniziare.</p>
+
+<section class="clock" aria-labelledby="orari">
+  <div class="wrap clock-grid">
+    <div class="clock-copy">
+      <h2 id="orari">Dici a che ora vuoi mangiare. Ti diciamo quando iniziare.</h2>
+      <p>Ogni ricetta conosce i suoi tempi. Scegli l'ora in tavola e GustOH ti dice quando accendere il fuoco, passaggio per passaggio.</p>
+    </div>
+    <figure class="timeline">
+      <figcaption>Spaghetti al pomodoro e basilico, per 2</figcaption>
+      <ol>
+        <li><time>12:30</time><span>Metti l'acqua sul fuoco</span></li>
+        <li><time>12:35</time><span>Prepara il sugo</span></li>
+        <li><time>12:50</time><span>Butta la pasta</span></li>
+        <li class="end"><time>13:00</time><span>In tavola</span></li>
+      </ol>
+    </figure>
+  </div>
+</section>
+
+<section class="row">
+  <div class="wrap row-grid">
+    <div class="row-copy">
+      <h2>Ricette spiegate come le spiegherebbe qualcuno di casa</h2>
+      <p>Ricette della tradizione italiana scritte con parole semplici. Le porzioni si ricalcolano, i tempi sono chiari e la cucina guidata ti mostra un passaggio alla volta, con gli ingredienti di quel passaggio e il timer.</p>
+    </div>
+    <div class="row-phones">
+      <figure class="phone phone-back"><picture><source srcset="img/ricetta-scuro.webp" media="(prefers-color-scheme: dark)"><img src="img/ricetta-chiaro.webp" alt="La scheda della parmigiana di melanzane con tempi e porzioni" width="390" height="844" loading="lazy" decoding="async"></picture></figure>
+      <figure class="phone phone-front"><picture><source srcset="img/cucina-scuro.webp" media="(prefers-color-scheme: dark)"><img src="img/cucina-chiaro.webp" alt="La cucina guidata: un passaggio alla volta, con il timer" width="390" height="844" loading="lazy" decoding="async"></picture></figure>
+    </div>
+  </div>
+</section>
+
+<section class="row row-flip">
+  <div class="wrap row-grid">
+    <div class="row-copy">
+      <h2>La settimana, la spesa e la dispensa parlano tra loro</h2>
+      <p>Decidi i pasti della settimana e la lista della spesa si scrive da sola, divisa per reparto e senza quello che hai già in casa. La dispensa ti avvisa quando qualcosa sta finendo.</p>
+    </div>
+    <div class="row-phones">
+      <figure class="phone phone-back"><picture><source srcset="img/spesa-scuro.webp" media="(prefers-color-scheme: dark)"><img src="img/spesa-chiaro.webp" alt="La lista della spesa divisa per reparto, con il costo stimato" width="390" height="844" loading="lazy" decoding="async"></picture></figure>
+      <figure class="phone phone-front"><picture><source srcset="img/dispensa-scuro.webp" media="(prefers-color-scheme: dark)"><img src="img/dispensa-chiaro.webp" alt="La dispensa divisa in frigo, freezer e dispensa" width="390" height="844" loading="lazy" decoding="async"></picture></figure>
+    </div>
+  </div>
+</section>
+
+<section class="more" aria-labelledby="altro">
+  <div class="wrap">
+    <h2 id="altro">E poi</h2>
+    <div class="more-grid">
+      <article><h3>Uno chef con l'intelligenza artificiale</h3><p>Chiedi un piatto con quello che hai, o fai mettere in ordine una tua ricetta. Solo per maggiorenni: le risposte possono contenere errori e lo diciamo sempre.</p></article>
+      <article><h3>Corsi brevi</h3><p>Lezioni di pochi minuti su tecniche e attrezzi di casa. Alla fine provi con una ricetta vera.</p></article>
+      <article><h3>Una community di cucina di casa</h3><p>Condividi i tuoi piatti e rifai quelli degli altri. Le ricette con gli allergeni che hai escluso non compaiono mai.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="paths" aria-labelledby="percorsi">
+  <div class="wrap">
+    <h2 id="percorsi">Pensata per chi cucina, a qualsiasi livello</h2>
+    <ul class="paths-grid">
+      <li><svg class="icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5C4 4.7 4.7 4 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5z"/><path d="M20 5.5c0-.8-.7-1.5-1.5-1.5H13v15h5.5c.8 0 1.5-.7 1.5-1.5z"/><path d="M11 19h2"/></svg><h3>Imparare</h3><p>Parti da zero: ricette facili e guidate, un passo alla volta.</p></li>
+      <li><svg class="icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/><circle cx="8.5" cy="14.5" r="1"/><circle cx="12" cy="14.5" r="1"/></svg><h3>Organizzarsi</h3><p>Cucini ogni giorno: settimana, spesa e dispensa in ordine.</p></li>
+      <li><svg class="icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14"/><path d="M5 19c3-4 6-7 10-9"/></svg><h3>Stare in forma</h3><p>Segui un piano o vuoi mangiare sano e proteico.</p></li>
+      <li><svg class="icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h16v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"/><path d="M2 10h2M20 10h2M9 6c0-1 1-1.5 1-2.5M13 6c0-1 1-1.5 1-2.5"/></svg><h3>Cucinare da chef</h3><p>Piatti più ricercati e cene con ospiti, ben coordinate.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="trust" aria-labelledby="dati">
+  <div class="wrap">
+    <h2 id="dati">I tuoi dati sono tuoi.</h2>
+    <dl class="trust-grid">
+      <div><dt>Niente pubblicità automatica</dt><dd>I contenuti sponsorizzati sono rari e sempre segnalati come &quot;Pubblicità&quot;.</dd></div>
+      <div><dt>Esporti tutto, quando vuoi</dt><dd>Le tue ricette, il diario e le liste, in testo o in PDF.</dd></div>
+      <div><dt>Cancelli tutto con un tocco</dt><dd>Account e dati, dall'app o scrivendoci.</dd></div>
+      <div><dt>Server in Europa</dt><dd>Account e dati stanno nell'Unione Europea.</dd></div>
+    </dl>
+    <p class="plans">Alcune funzioni richiedono l'abbonamento Premium. La prova dura 7 giorni: durata e prezzo sono scritti prima di iniziare e ti avvisiamo 2 giorni prima della fine.</p>
+  </div>
+</section>
 </main>
 <footer class="foot">
-  <div class="wrap">
-    <p>GustOH è un'app di Marketing Genetics S.r.l. · P.IVA IT04020560365 · Via Guido Baccelli 44, 41126 Modena (MO), Italia · <a href="https://www.marketinggenetics.it/" rel="noopener">Sito della società</a></p>
-    <p>Contatti: <a href="mailto:supporto@gustoh.it">supporto@gustoh.it</a> · <a href="mailto:info@gustoh.it">info@gustoh.it</a></p>
-    <p class="foot-links"><a href="privacy.html">Privacy</a><a href="termini.html">Termini</a><a href="supporto.html">Assistenza</a><a href="elimina-account.html">Elimina account</a><a href="en/index.html" hreflang="en" lang="en">English</a></p>
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <a class="brand" href="index.html"><img src="logo.png" alt="" width="36" height="36"><span>GustOH</span></a>
+      <p>La cucina di casa, organizzata.</p>
+    </div>
+    <div>
+      <h2>Aiuto</h2>
+      <ul>
+        <li><a href="supporto.html">Assistenza</a></li>
+        <li><a href="elimina-account.html">Elimina account</a></li>
+        <li><a href="mailto:supporto@gustoh.it">supporto@gustoh.it</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Note legali</h2>
+      <ul>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="termini.html">Termini</a></li>
+        <li><a href="mailto:info@gustoh.it">info@gustoh.it</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Società</h2>
+      <address>
+        GustOH è un'app di<br><strong>Marketing Genetics S.r.l.</strong><br>
+        P.IVA IT04020560365<br>
+        Via Guido Baccelli 44, 41126 Modena (MO), Italia
+      </address>
+      <p><a href="https://www.marketinggenetics.it/" rel="noopener">Sito della società</a></p>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <p>© 2026 Marketing Genetics S.r.l.</p>
+    <a href="en/index.html" hreflang="en" lang="en">English</a>
   </div>
 </footer>
 </body>
