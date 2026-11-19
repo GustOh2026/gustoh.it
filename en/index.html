@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GustOH — your home kitchen, organised</title>
-<meta name="description" content="Step-by-step recipes, weekly meals, shopping list and pantry: Italian home cooking in one app.">
+<title>GustOH — what to cook, what to buy, when to start</title>
+<meta name="description" content="What do I cook? What do I buy? When do I start? Italian home recipes step by step, a shopping list that writes itself and the right time to turn on the stove, in one app.">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#fbf7ef" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#17120e" media="(prefers-color-scheme: dark)">
@@ -12,6 +12,7 @@
 <link rel="apple-touch-icon" href="../logo.png">
 <link rel="alternate" hreflang="it" href="../index.html">
 <link rel="preload" href="../caratteri/Fraunces-700.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="../caratteri/Fraunces-600-corsivo.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="stylesheet" href="../stile.css">
 </head>
 <body class="page-index">
@@ -24,6 +25,7 @@
       <a class="opt" href="privacy.html">Privacy</a>
       <a class="opt" href="termini.html">Terms</a>
       <a class="lang" href="../index.html" hreflang="it" lang="it">Italiano</a>
+      <a class="nav-cta" href="mailto:info@gustoh.it?subject=Tell%20me%20when%20GustOH%20is%20out&amp;body=Hi%2C%20please%20let%20me%20know%20when%20GustOH%20is%20out%20on%20the%20App%20Store%20and%20Google%20Play.%20Thanks!">Tell me when it's out</a>
     </nav>
   </div>
 </header>
@@ -31,40 +33,28 @@
 <section class="hero">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <h1>Your kitchen, organised.</h1>
-      <p class="lead">GustOH brings order to home cooking: step-by-step recipes, weekly meals, shopping list and pantry. All in one app, in English and Italian.</p>
-      <p class="soon">Coming soon to the App Store and Google Play.</p>
+      <h1><span>What do I cook?</span> <span>What do I buy?</span> <span>When do I start?</span></h1>
+      <p class="lead">GustOH answers all three, every day: Italian home recipes explained step by step, a shopping list that writes itself and the right time to turn on the stove.</p>
+      <div class="hero-actions">
+        <a class="btn" href="mailto:info@gustoh.it?subject=Tell%20me%20when%20GustOH%20is%20out&amp;body=Hi%2C%20please%20let%20me%20know%20when%20GustOH%20is%20out%20on%20the%20App%20Store%20and%20Google%20Play.%20Thanks!">Tell me when it's out</a>
+        <p class="soon">Soon on the App Store and Google Play.</p>
+      </div>
+      <p class="cta-note">Your mail app opens with the message already written: just send it.</p>
     </div>
     <div class="hero-phones">
+      <svg class="morso" viewBox="0 0 200 200" aria-hidden="true"><defs><mask id="morso-m"><rect width="200" height="200" fill="#fff"/><circle cx="141" cy="27" r="25"/><circle cx="171" cy="60" r="18"/><circle cx="188" cy="92" r="21"/></mask></defs><circle cx="100" cy="100" r="92" mask="url(#morso-m)"/><circle cx="178" cy="22" r="7"/><circle cx="197" cy="52" r="4.5"/></svg>
       <figure class="phone phone-back"><picture><source srcset="../img/home-scuro.webp" media="(prefers-color-scheme: dark)"><img src="../img/home-chiaro.webp" alt="GustOH Home with today's lunch and when to start cooking" width="390" height="844" fetchpriority="high" decoding="async"></picture></figure>
       <figure class="phone phone-front"><picture><source srcset="../img/settimana-scuro.webp" media="(prefers-color-scheme: dark)"><img src="../img/settimana-chiaro.webp" alt="The weekly meal plan, day by day" width="390" height="844" fetchpriority="high" decoding="async"></picture></figure>
     </div>
   </div>
 </section>
 
-<section class="clock" aria-labelledby="orari">
-  <div class="wrap clock-grid">
-    <div class="clock-copy">
-      <h2 id="orari">Tell us when you want to eat. We tell you when to start.</h2>
-      <p>Every recipe knows its timings. Pick the time you sit down and GustOH tells you when to turn on the stove, step by step.</p>
-    </div>
-    <figure class="timeline">
-      <figcaption>Spaghetti with tomato and basil, for 2</figcaption>
-      <ol>
-        <li><time>12:30</time><span>Put the water on</span></li>
-        <li><time>12:35</time><span>Make the sauce</span></li>
-        <li><time>12:50</time><span>Drop the pasta</span></li>
-        <li class="end"><time>13:00</time><span>Lunch is served</span></li>
-      </ol>
-    </figure>
-  </div>
-</section>
-
-<section class="row">
+<section class="row" aria-labelledby="cosa-cucino">
   <div class="wrap row-grid">
     <div class="row-copy">
-      <h2>Recipes explained the way someone at home would</h2>
-      <p>Traditional Italian recipes in plain words. Servings rescale, timings are clear, and guided cooking shows one step at a time, with that step's ingredients and a timer.</p>
+      <h2 class="qa" id="cosa-cucino"><span class="q">What do I cook tonight?</span> <span class="a">A home recipe, explained one step at a time.</span></h2>
+      <p>Traditional Italian recipes in plain words: the way someone at home would explain them.</p>
+      <ul class="points"><li>Guided cooking: one step at a time, with that step's ingredients and a timer</li><li>Servings that rescale on their own, for 2 or for 8</li><li>Allergen filter: what you excluded never shows up</li></ul>
     </div>
     <div class="row-phones">
       <figure class="phone phone-back"><picture><source srcset="../img/ricetta-scuro.webp" media="(prefers-color-scheme: dark)"><img src="../img/ricetta-chiaro.webp" alt="The aubergine parmigiana recipe with times and servings" width="390" height="844" loading="lazy" decoding="async"></picture></figure>
@@ -73,11 +63,12 @@
   </div>
 </section>
 
-<section class="row row-flip">
+<section class="row row-flip" aria-labelledby="cosa-compro">
   <div class="wrap row-grid">
     <div class="row-copy">
-      <h2>Your week, shopping and pantry talk to each other</h2>
-      <p>Plan the week's meals and the shopping list writes itself, sorted by aisle and without what you already have. The pantry tells you when something is running low.</p>
+      <h2 class="qa" id="cosa-compro"><span class="q">What do I buy?</span> <span class="a">The shopping list writes itself.</span></h2>
+      <p>Plan the week's meals, or let the app suggest a menu. Your week, shopping and pantry talk to each other.</p>
+      <ul class="points"><li>A list sorted by aisle, with an estimated cost</li><li>Without what you already have at home</li><li>The pantry tells you when something is running low</li></ul>
     </div>
     <div class="row-phones">
       <figure class="phone phone-back"><picture><source srcset="../img/spesa-scuro.webp" media="(prefers-color-scheme: dark)"><img src="../img/spesa-chiaro.webp" alt="The shopping list sorted by aisle, with an estimated cost" width="390" height="844" loading="lazy" decoding="async"></picture></figure>
@@ -86,13 +77,49 @@
   </div>
 </section>
 
+<section class="clock" aria-labelledby="orari">
+  <div class="wrap clock-grid">
+    <div class="clock-copy">
+      <h2 class="qa" id="orari"><span class="q">When do I start?</span> <span class="a">Tell us when you want to eat. We tell you when to turn on the stove.</span></h2>
+      <p>Every recipe knows its timings. <span class="demo-try">Try it: pick the dish and move the time.</span></p>
+    </div>
+    <div class="timeline demo" data-demo="[[[30,&quot;Put the water on&quot;],[25,&quot;Make the sauce&quot;],[10,&quot;Drop the pasta&quot;],[0,&quot;On the table&quot;]],[[20,&quot;Flour the chicken&quot;],[15,&quot;Brown it in the pan&quot;],[5,&quot;Add the lemon&quot;],[0,&quot;On the table&quot;]],[[100,&quot;Prepare the aubergines&quot;],[60,&quot;Layer and bake&quot;],[20,&quot;Take it out and let it rest&quot;],[0,&quot;On the table&quot;]]]" data-say="On the table at|Start at">
+      <fieldset class="demo-dishes demo-ctl">
+        <legend>What you're making</legend>
+        <div class="seg">
+          <label><input type="radio" name="piatto" value="0" checked><span><b>Tomato spaghetti</b><small>30 min</small></span></label>
+          <label><input type="radio" name="piatto" value="1"><span><b>Lemon chicken</b><small>20 min</small></span></label>
+          <label><input type="radio" name="piatto" value="2"><span><b>Parmigiana</b><small>1 h 40</small></span></label>
+        </div>
+      </fieldset>
+      <p class="demo-nojs">Tomato spaghetti, 30 min</p>
+      <div class="demo-clock">
+        <p><span>On the table at</span><strong data-out="table">20:00</strong></p>
+        <p class="start"><span>Start at</span><strong data-out="start">19:30</strong></p>
+      </div>
+      <div class="demo-slider demo-ctl">
+        <button type="button" data-step="-15" aria-label="15 minutes earlier">−</button>
+        <input type="range" min="660" max="1350" step="5" value="1200" aria-label="What time you want to eat">
+        <button type="button" data-step="15" aria-label="15 minutes later">+</button>
+      </div>
+      <ol>
+        <li><time>19:30</time><span>Put the water on</span></li>
+        <li><time>19:35</time><span>Make the sauce</span></li>
+        <li><time>19:50</time><span>Drop the pasta</span></li>
+        <li class="end"><time>20:00</time><span>On the table</span></li>
+      </ol>
+      <p class="demo-note">Example with three recipes from the catalogue. Timings are part of Premium.</p>
+    </div>
+  </div>
+</section>
+
 <section class="more" aria-labelledby="altro">
   <div class="wrap">
-    <h2 id="altro">And also</h2>
+    <h2 id="altro">And when you want more</h2>
     <div class="more-grid">
-      <article><h3>An AI chef</h3><p>Ask for a dish with what you have, or tidy up one of your recipes. Adults only: answers may contain mistakes and we always say so.</p></article>
-      <article><h3>Short courses</h3><p>A few minutes per lesson on techniques and kitchen tools. At the end you try a real recipe.</p></article>
-      <article><h3>A home cooking community</h3><p>Share your dishes and cook other people's. Recipes with allergens you excluded never appear.</p></article>
+      <article><h3>An AI chef</h3><p>Ask for a dish with what you have at home, or tidy up one of your recipes. Adults only: answers may contain mistakes and we always say so.</p></article>
+      <article><h3>16 courses, 52 short lessons</h3><p>A few minutes per lesson on techniques and kitchen tools. At the end you try a real recipe.</p></article>
+      <article><h3>A community with its challenges</h3><p>Share your dishes and cook other people's. Recipes with allergens you excluded never appear.</p></article>
     </div>
   </div>
 </section>
@@ -109,6 +136,22 @@
   </div>
 </section>
 
+<section class="cost" aria-labelledby="prezzi">
+  <div class="wrap">
+    <div class="cost-head">
+      <h2 id="prezzi">What it costs, plainly.</h2>
+      <p>You start without a subscription. You can try Premium for 7 days: length and price are shown before you start, and we remind you 2 days before it ends.</p>
+    </div>
+    <ul class="cost-grid">
+      <li><h3>Basic</h3><p class="price"><strong>No subscription</strong><span>To get started</span></p><ul><li>The recipe catalogue</li><li>Guided cooking on catalogue recipes</li><li>A shopping list you write by hand</li><li>3 chef requests in total</li></ul></li>
+      <li class="main"><h3>Premium</h3><p class="price"><strong>€4.99 a month</strong><span>or €39.99 a year</span></p><ul><li>Servings that rescale, and timings</li><li>Weekly plan with automatic menu</li><li>Automatic shopping list and pantry alerts</li><li>Chef: 60 requests a month</li></ul></li>
+      <li><h3>Couple</h3><p class="price"><strong>€6.49 a month</strong><span>or €49.99 a year</span></p><ul><li>All of Premium, for 2 people</li><li>Shared shopping list and pantry</li><li>Favourites in shared folders</li><li>Chef: 90 requests a month for two</li></ul></li>
+      <li><h3>Family</h3><p class="price"><strong>€7.99 a month</strong><span>or €59.99 a year</span></p><ul><li>All of Premium, for up to 4 people</li><li>Shared shopping list and pantry</li><li>Favourites in shared folders</li><li>Chef: 120 requests a month for everyone</li></ul></li>
+    </ul>
+    <p class="cost-note">Prices planned for Italy at launch, VAT included. Payment, renewal and cancellation go through the App Store or Google Play.</p>
+  </div>
+</section>
+
 <section class="trust" aria-labelledby="dati">
   <div class="wrap">
     <h2 id="dati">Your data is yours.</h2>
@@ -118,7 +161,25 @@
       <div><dt>Delete everything in one tap</dt><dd>Account and data, from the app or by writing to us.</dd></div>
       <div><dt>Servers in Europe</dt><dd>Accounts and data are stored in the European Union.</dd></div>
     </dl>
-    <p class="plans">Some features need a Premium subscription. The trial lasts 7 days: length and price are shown before you start, and we remind you 2 days before it ends.</p>
+  </div>
+</section>
+
+<section class="finale" aria-labelledby="avvisami">
+  <div class="wrap">
+    <h2 id="avvisami">Want to be there from day one?</h2>
+    <p>Write to us now: we'll let you know as soon as GustOH is out on the App Store and Google Play.</p>
+    <a class="btn btn-ink" href="mailto:info@gustoh.it?subject=Tell%20me%20when%20GustOH%20is%20out&amp;body=Hi%2C%20please%20let%20me%20know%20when%20GustOH%20is%20out%20on%20the%20App%20Store%20and%20Google%20Play.%20Thanks!">Tell me when it's out</a>
+    <p class="cta-note">Your mail app opens with the message already written: just send it.</p>
+  </div>
+</section>
+
+<section class="pro" aria-labelledby="lavora-con-noi">
+  <div class="wrap pro-grid">
+    <div>
+      <h2 id="lavora-con-noi">Are you a chef or a recipe creator? Work with us.</h2>
+      <p>We are preparing a space for people who create recipes. Write to us and tell us what you do.</p>
+    </div>
+    <a class="btn btn-line" href="mailto:info@gustoh.it?subject=Work%20with%20us">Write to info@gustoh.it</a>
   </div>
 </section>
 </main>
@@ -160,13 +221,44 @@
   </div>
 </footer>
 <script>
-/* Effetti di scorrimento (nessun dato raccolto, nessun servizio esterno): segna gli elementi da far comparire
-   e li mostra quando entrano nello schermo. Senza questo script il sito resta uguale, solo fermo. */
+/* Nessun dato raccolto, nessun servizio esterno. Senza questo script il sito resta uguale, solo fermo. */
 (function () {
+  /* Dimostrazione "a che ora inizio": scegli il piatto e l'ora in tavola, gli orari si ricalcolano. */
+  var demo = document.querySelector('[data-demo]');
+  if (demo) {
+    var dishes = JSON.parse(demo.getAttribute('data-demo'));
+    var say = demo.getAttribute('data-say').split('|');
+    var range = demo.querySelector('input[type=range]');
+    var list = demo.querySelector('ol');
+    var rows = list.querySelectorAll('li');
+    var outTable = demo.querySelector('[data-out=table]');
+    var outStart = demo.querySelector('[data-out=start]');
+    var dish = 0;
+    var hhmm = function (m) { m = ((m % 1440) + 1440) % 1440; var h = Math.floor(m / 60), n = m % 60; return (h < 10 ? '0' : '') + h + ':' + (n < 10 ? '0' : '') + n; };
+    var draw = function () {
+      var t = +range.value, steps = dishes[dish];
+      outTable.textContent = hhmm(t);
+      outStart.textContent = hhmm(t - steps[0][0]);
+      rows.forEach(function (li, i) { li.querySelector('time').textContent = hhmm(t - steps[i][0]); li.querySelector('span').textContent = steps[i][1]; });
+      range.setAttribute('aria-valuetext', say[0] + ' ' + hhmm(t) + ', ' + say[1] + ' ' + hhmm(t - steps[0][0]));
+      range.style.setProperty('--p', ((t - range.min) / (range.max - range.min)) * 100 + '%');
+    };
+    range.addEventListener('input', draw);
+    demo.querySelectorAll('input[type=radio]').forEach(function (r) {
+      r.addEventListener('change', function () { dish = +r.value; draw(); list.classList.remove('swap'); void list.offsetWidth; list.classList.add('swap'); });
+    });
+    demo.querySelectorAll('[data-step]').forEach(function (b) {
+      b.addEventListener('click', function () { range.value = +range.value + +b.getAttribute('data-step'); draw(); });
+    });
+    demo.classList.add('demo-on');
+    draw();
+  }
+
+  /* Effetti di scorrimento: segna gli elementi da far comparire e li mostra quando entrano nello schermo. */
   var d = document.documentElement;
   if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   d.classList.add('js');
-  var groups = ['.row-copy > *', '.clock-copy > *', '.more h2', '.more-grid > article', '.paths h2', '.paths-grid > li', '.trust h2', '.trust-grid > div', '.plans', '.doc-head > *'];
+  var groups = ['.row-copy > *', '.clock-copy > *', '.more h2', '.more-grid > article', '.paths h2', '.paths-grid > li', '.cost-head > *', '.cost-grid > li', '.cost-note', '.trust h2', '.trust-grid > div', '.finale .wrap > *', '.pro-grid > *', '.doc-head > *'];
   var items = [];
   groups.forEach(function (sel) {
     document.querySelectorAll(sel).forEach(function (el) { el.setAttribute('data-reveal', ''); el.style.setProperty('--i', Array.prototype.indexOf.call(el.parentNode.children, el)); items.push(el); });

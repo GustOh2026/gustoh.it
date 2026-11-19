@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GustOH — la cucina di casa, organizzata</title>
-<meta name="description" content="Ricette spiegate passo passo, la settimana dei pasti, la lista della spesa e la dispensa: la cucina all'italiana in un'unica app.">
+<title>GustOH — cosa cucino, cosa compro, a che ora inizio</title>
+<meta name="description" content="Cosa cucino? Cosa compro? A che ora inizio? Ricette di casa spiegate passo passo, la spesa che si scrive da sola e l'ora giusta per accendere il fuoco, in un'unica app.">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#fbf7ef" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#17120e" media="(prefers-color-scheme: dark)">
@@ -12,6 +12,7 @@
 <link rel="apple-touch-icon" href="logo.png">
 <link rel="alternate" hreflang="en" href="en/index.html">
 <link rel="preload" href="caratteri/Fraunces-700.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="caratteri/Fraunces-600-corsivo.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="stylesheet" href="stile.css">
 </head>
 <body class="page-index">
@@ -24,6 +25,7 @@
       <a class="opt" href="privacy.html">Privacy</a>
       <a class="opt" href="termini.html">Termini</a>
       <a class="lang" href="en/index.html" hreflang="en" lang="en">English</a>
+      <a class="nav-cta" href="mailto:info@gustoh.it?subject=Avvisami%20quando%20esce%20GustOH&amp;body=Ciao%2C%20avvisatemi%20quando%20GustOH%20esce%20su%20App%20Store%20e%20Google%20Play.%20Grazie!">Avvisami quando esce</a>
     </nav>
   </div>
 </header>
@@ -31,40 +33,28 @@
 <section class="hero">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <h1>La tua cucina, organizzata.</h1>
-      <p class="lead">GustOH mette in ordine la cucina di casa: ricette spiegate passo passo, la settimana dei pasti, la lista della spesa e la dispensa. Tutto in un'app, in italiano e in inglese.</p>
-      <p class="soon">Presto su App Store e Google Play.</p>
+      <h1><span>Cosa cucino?</span> <span>Cosa compro?</span> <span>A che ora inizio?</span></h1>
+      <p class="lead">GustOH risponde ogni giorno a tutte e tre: ricette di casa spiegate passo passo, la spesa che si scrive da sola e l'ora giusta per accendere il fuoco.</p>
+      <div class="hero-actions">
+        <a class="btn" href="mailto:info@gustoh.it?subject=Avvisami%20quando%20esce%20GustOH&amp;body=Ciao%2C%20avvisatemi%20quando%20GustOH%20esce%20su%20App%20Store%20e%20Google%20Play.%20Grazie!">Avvisami quando esce</a>
+        <p class="soon">Presto su App Store e Google Play.</p>
+      </div>
+      <p class="cta-note">Si apre la tua posta con il messaggio già scritto: devi solo inviarlo.</p>
     </div>
     <div class="hero-phones">
+      <svg class="morso" viewBox="0 0 200 200" aria-hidden="true"><defs><mask id="morso-m"><rect width="200" height="200" fill="#fff"/><circle cx="141" cy="27" r="25"/><circle cx="171" cy="60" r="18"/><circle cx="188" cy="92" r="21"/></mask></defs><circle cx="100" cy="100" r="92" mask="url(#morso-m)"/><circle cx="178" cy="22" r="7"/><circle cx="197" cy="52" r="4.5"/></svg>
       <figure class="phone phone-back"><picture><source srcset="img/home-scuro.webp" media="(prefers-color-scheme: dark)"><img src="img/home-chiaro.webp" alt="La Home di GustOH con il pranzo di oggi e l'ora in cui iniziare" width="390" height="844" fetchpriority="high" decoding="async"></picture></figure>
       <figure class="phone phone-front"><picture><source srcset="img/settimana-scuro.webp" media="(prefers-color-scheme: dark)"><img src="img/settimana-chiaro.webp" alt="La settimana dei pasti, giorno per giorno" width="390" height="844" fetchpriority="high" decoding="async"></picture></figure>
     </div>
   </div>
 </section>
 
-<section class="clock" aria-labelledby="orari">
-  <div class="wrap clock-grid">
-    <div class="clock-copy">
-      <h2 id="orari">Dici a che ora vuoi mangiare. Ti diciamo quando iniziare.</h2>
-      <p>Ogni ricetta conosce i suoi tempi. Scegli l'ora in tavola e GustOH ti dice quando accendere il fuoco, passaggio per passaggio.</p>
-    </div>
-    <figure class="timeline">
-      <figcaption>Spaghetti al pomodoro e basilico, per 2</figcaption>
-      <ol>
-        <li><time>12:30</time><span>Metti l'acqua sul fuoco</span></li>
-        <li><time>12:35</time><span>Prepara il sugo</span></li>
-        <li><time>12:50</time><span>Butta la pasta</span></li>
-        <li class="end"><time>13:00</time><span>In tavola</span></li>
-      </ol>
-    </figure>
-  </div>
-</section>
-
-<section class="row">
+<section class="row" aria-labelledby="cosa-cucino">
   <div class="wrap row-grid">
     <div class="row-copy">
-      <h2>Ricette spiegate come le spiegherebbe qualcuno di casa</h2>
-      <p>Ricette della tradizione italiana scritte con parole semplici. Le porzioni si ricalcolano, i tempi sono chiari e la cucina guidata ti mostra un passaggio alla volta, con gli ingredienti di quel passaggio e il timer.</p>
+      <h2 class="qa" id="cosa-cucino"><span class="q">Cosa cucino stasera?</span> <span class="a">Una ricetta di casa, spiegata un passaggio alla volta.</span></h2>
+      <p>Le ricette della tradizione italiana, scritte con parole semplici: come le spiegherebbe qualcuno di casa.</p>
+      <ul class="points"><li>Cucina guidata: un passaggio alla volta, con i suoi ingredienti e il timer</li><li>Porzioni che si ricalcolano da sole, per 2 o per 8</li><li>Filtro allergeni: quello che hai escluso non compare mai</li></ul>
     </div>
     <div class="row-phones">
       <figure class="phone phone-back"><picture><source srcset="img/ricetta-scuro.webp" media="(prefers-color-scheme: dark)"><img src="img/ricetta-chiaro.webp" alt="La scheda della parmigiana di melanzane con tempi e porzioni" width="390" height="844" loading="lazy" decoding="async"></picture></figure>
@@ -73,11 +63,12 @@
   </div>
 </section>
 
-<section class="row row-flip">
+<section class="row row-flip" aria-labelledby="cosa-compro">
   <div class="wrap row-grid">
     <div class="row-copy">
-      <h2>La settimana, la spesa e la dispensa parlano tra loro</h2>
-      <p>Decidi i pasti della settimana e la lista della spesa si scrive da sola, divisa per reparto e senza quello che hai già in casa. La dispensa ti avvisa quando qualcosa sta finendo.</p>
+      <h2 class="qa" id="cosa-compro"><span class="q">Cosa compro?</span> <span class="a">La lista della spesa si scrive da sola.</span></h2>
+      <p>Decidi i pasti della settimana, o fatti proporre il menu. Settimana, spesa e dispensa parlano tra loro.</p>
+      <ul class="points"><li>Lista divisa per reparto, con il costo stimato</li><li>Senza quello che hai già in casa</li><li>La dispensa ti avvisa quando qualcosa sta finendo</li></ul>
     </div>
     <div class="row-phones">
       <figure class="phone phone-back"><picture><source srcset="img/spesa-scuro.webp" media="(prefers-color-scheme: dark)"><img src="img/spesa-chiaro.webp" alt="La lista della spesa divisa per reparto, con il costo stimato" width="390" height="844" loading="lazy" decoding="async"></picture></figure>
@@ -86,13 +77,49 @@
   </div>
 </section>
 
+<section class="clock" aria-labelledby="orari">
+  <div class="wrap clock-grid">
+    <div class="clock-copy">
+      <h2 class="qa" id="orari"><span class="q">A che ora inizio?</span> <span class="a">Dici a che ora vuoi mangiare. Ti diciamo quando accendere il fuoco.</span></h2>
+      <p>Ogni ricetta conosce i suoi tempi. <span class="demo-try">Prova: scegli il piatto e sposta l'ora.</span></p>
+    </div>
+    <div class="timeline demo" data-demo="[[[30,&quot;Metti l'acqua sul fuoco&quot;],[25,&quot;Prepara il sugo&quot;],[10,&quot;Butta la pasta&quot;],[0,&quot;In tavola&quot;]],[[20,&quot;Infarina il pollo&quot;],[15,&quot;Rosolalo in padella&quot;],[5,&quot;Aggiungi il limone&quot;],[0,&quot;In tavola&quot;]],[[100,&quot;Prepara le melanzane&quot;],[60,&quot;Fai gli strati e inforna&quot;],[20,&quot;Sforna e lascia riposare&quot;],[0,&quot;In tavola&quot;]]]" data-say="In tavola alle|Inizia alle">
+      <fieldset class="demo-dishes demo-ctl">
+        <legend>Cosa prepari</legend>
+        <div class="seg">
+          <label><input type="radio" name="piatto" value="0" checked><span><b>Spaghetti al pomodoro</b><small>30 min</small></span></label>
+          <label><input type="radio" name="piatto" value="1"><span><b>Pollo al limone</b><small>20 min</small></span></label>
+          <label><input type="radio" name="piatto" value="2"><span><b>Parmigiana</b><small>1 h 40</small></span></label>
+        </div>
+      </fieldset>
+      <p class="demo-nojs">Spaghetti al pomodoro, 30 min</p>
+      <div class="demo-clock">
+        <p><span>In tavola alle</span><strong data-out="table">20:00</strong></p>
+        <p class="start"><span>Inizia alle</span><strong data-out="start">19:30</strong></p>
+      </div>
+      <div class="demo-slider demo-ctl">
+        <button type="button" data-step="-15" aria-label="15 minuti prima">−</button>
+        <input type="range" min="660" max="1350" step="5" value="1200" aria-label="A che ora vuoi mangiare">
+        <button type="button" data-step="15" aria-label="15 minuti dopo">+</button>
+      </div>
+      <ol>
+        <li><time>19:30</time><span>Metti l'acqua sul fuoco</span></li>
+        <li><time>19:35</time><span>Prepara il sugo</span></li>
+        <li><time>19:50</time><span>Butta la pasta</span></li>
+        <li class="end"><time>20:00</time><span>In tavola</span></li>
+      </ol>
+      <p class="demo-note">Esempio con tre ricette del catalogo. Gli orari fanno parte di Premium.</p>
+    </div>
+  </div>
+</section>
+
 <section class="more" aria-labelledby="altro">
   <div class="wrap">
-    <h2 id="altro">E poi</h2>
+    <h2 id="altro">E quando vuoi di più</h2>
     <div class="more-grid">
-      <article><h3>Uno chef con l'intelligenza artificiale</h3><p>Chiedi un piatto con quello che hai, o fai mettere in ordine una tua ricetta. Solo per maggiorenni: le risposte possono contenere errori e lo diciamo sempre.</p></article>
-      <article><h3>Corsi brevi</h3><p>Lezioni di pochi minuti su tecniche e attrezzi di casa. Alla fine provi con una ricetta vera.</p></article>
-      <article><h3>Una community di cucina di casa</h3><p>Condividi i tuoi piatti e rifai quelli degli altri. Le ricette con gli allergeni che hai escluso non compaiono mai.</p></article>
+      <article><h3>Uno chef con l'intelligenza artificiale</h3><p>Chiedi un piatto con quello che hai in casa, o fai mettere in ordine una tua ricetta. Solo per maggiorenni: le risposte possono contenere errori e lo diciamo sempre.</p></article>
+      <article><h3>16 corsi, 52 lezioni brevi</h3><p>Pochi minuti a lezione su tecniche e attrezzi di casa. Alla fine provi con una ricetta vera.</p></article>
+      <article><h3>Una community con le sue sfide</h3><p>Condividi i tuoi piatti e rifai quelli degli altri. Le ricette con gli allergeni che hai escluso non compaiono mai.</p></article>
     </div>
   </div>
 </section>
@@ -109,6 +136,22 @@
   </div>
 </section>
 
+<section class="cost" aria-labelledby="prezzi">
+  <div class="wrap">
+    <div class="cost-head">
+      <h2 id="prezzi">Quanto costa, detto chiaro.</h2>
+      <p>Inizi senza abbonamento. Premium lo provi per 7 giorni: durata e prezzo li leggi prima di iniziare, e ti avvisiamo 2 giorni prima della fine.</p>
+    </div>
+    <ul class="cost-grid">
+      <li><h3>Base</h3><p class="price"><strong>Senza abbonamento</strong><span>Per cominciare</span></p><ul><li>Il catalogo delle ricette</li><li>Cucina guidata sulle ricette del catalogo</li><li>Lista della spesa scritta a mano</li><li>3 richieste allo chef in tutto</li></ul></li>
+      <li class="main"><h3>Premium</h3><p class="price"><strong>4,99 € al mese</strong><span>oppure 39,99 € all'anno</span></p><ul><li>Porzioni che si ricalcolano e orari</li><li>Settimana con menu automatico</li><li>Spesa automatica e dispensa con avvisi</li><li>Chef: 60 richieste al mese</li></ul></li>
+      <li><h3>Coppia</h3><p class="price"><strong>6,49 € al mese</strong><span>oppure 49,99 € all'anno</span></p><ul><li>Tutto Premium, per 2 persone</li><li>Spesa e dispensa condivise</li><li>Preferiti in cartelle condivise</li><li>Chef: 90 richieste al mese in due</li></ul></li>
+      <li><h3>Famiglia</h3><p class="price"><strong>7,99 € al mese</strong><span>oppure 59,99 € all'anno</span></p><ul><li>Tutto Premium, fino a 4 persone</li><li>Spesa e dispensa condivise</li><li>Preferiti in cartelle condivise</li><li>Chef: 120 richieste al mese per tutti</li></ul></li>
+    </ul>
+    <p class="cost-note">Prezzi previsti per l'Italia al lancio, IVA inclusa. Pagamento, rinnovo e disdetta passano da App Store o Google Play.</p>
+  </div>
+</section>
+
 <section class="trust" aria-labelledby="dati">
   <div class="wrap">
     <h2 id="dati">I tuoi dati sono tuoi.</h2>
@@ -118,7 +161,25 @@
       <div><dt>Cancelli tutto con un tocco</dt><dd>Account e dati, dall'app o scrivendoci.</dd></div>
       <div><dt>Server in Europa</dt><dd>Account e dati stanno nell'Unione Europea.</dd></div>
     </dl>
-    <p class="plans">Alcune funzioni richiedono l'abbonamento Premium. La prova dura 7 giorni: durata e prezzo sono scritti prima di iniziare e ti avvisiamo 2 giorni prima della fine.</p>
+  </div>
+</section>
+
+<section class="finale" aria-labelledby="avvisami">
+  <div class="wrap">
+    <h2 id="avvisami">Vuoi esserci dal primo giorno?</h2>
+    <p>Scrivici adesso: ti avvisiamo appena GustOH esce su App Store e Google Play.</p>
+    <a class="btn btn-ink" href="mailto:info@gustoh.it?subject=Avvisami%20quando%20esce%20GustOH&amp;body=Ciao%2C%20avvisatemi%20quando%20GustOH%20esce%20su%20App%20Store%20e%20Google%20Play.%20Grazie!">Avvisami quando esce</a>
+    <p class="cta-note">Si apre la tua posta con il messaggio già scritto: devi solo inviarlo.</p>
+  </div>
+</section>
+
+<section class="pro" aria-labelledby="lavora-con-noi">
+  <div class="wrap pro-grid">
+    <div>
+      <h2 id="lavora-con-noi">Sei uno chef o crei ricette? Lavora con noi.</h2>
+      <p>Stiamo preparando uno spazio per chi le ricette le crea. Scrivici e raccontaci cosa fai.</p>
+    </div>
+    <a class="btn btn-line" href="mailto:info@gustoh.it?subject=Lavora%20con%20noi">Scrivi a info@gustoh.it</a>
   </div>
 </section>
 </main>
@@ -160,13 +221,44 @@
   </div>
 </footer>
 <script>
-/* Effetti di scorrimento (nessun dato raccolto, nessun servizio esterno): segna gli elementi da far comparire
-   e li mostra quando entrano nello schermo. Senza questo script il sito resta uguale, solo fermo. */
+/* Nessun dato raccolto, nessun servizio esterno. Senza questo script il sito resta uguale, solo fermo. */
 (function () {
+  /* Dimostrazione "a che ora inizio": scegli il piatto e l'ora in tavola, gli orari si ricalcolano. */
+  var demo = document.querySelector('[data-demo]');
+  if (demo) {
+    var dishes = JSON.parse(demo.getAttribute('data-demo'));
+    var say = demo.getAttribute('data-say').split('|');
+    var range = demo.querySelector('input[type=range]');
+    var list = demo.querySelector('ol');
+    var rows = list.querySelectorAll('li');
+    var outTable = demo.querySelector('[data-out=table]');
+    var outStart = demo.querySelector('[data-out=start]');
+    var dish = 0;
+    var hhmm = function (m) { m = ((m % 1440) + 1440) % 1440; var h = Math.floor(m / 60), n = m % 60; return (h < 10 ? '0' : '') + h + ':' + (n < 10 ? '0' : '') + n; };
+    var draw = function () {
+      var t = +range.value, steps = dishes[dish];
+      outTable.textContent = hhmm(t);
+      outStart.textContent = hhmm(t - steps[0][0]);
+      rows.forEach(function (li, i) { li.querySelector('time').textContent = hhmm(t - steps[i][0]); li.querySelector('span').textContent = steps[i][1]; });
+      range.setAttribute('aria-valuetext', say[0] + ' ' + hhmm(t) + ', ' + say[1] + ' ' + hhmm(t - steps[0][0]));
+      range.style.setProperty('--p', ((t - range.min) / (range.max - range.min)) * 100 + '%');
+    };
+    range.addEventListener('input', draw);
+    demo.querySelectorAll('input[type=radio]').forEach(function (r) {
+      r.addEventListener('change', function () { dish = +r.value; draw(); list.classList.remove('swap'); void list.offsetWidth; list.classList.add('swap'); });
+    });
+    demo.querySelectorAll('[data-step]').forEach(function (b) {
+      b.addEventListener('click', function () { range.value = +range.value + +b.getAttribute('data-step'); draw(); });
+    });
+    demo.classList.add('demo-on');
+    draw();
+  }
+
+  /* Effetti di scorrimento: segna gli elementi da far comparire e li mostra quando entrano nello schermo. */
   var d = document.documentElement;
   if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   d.classList.add('js');
-  var groups = ['.row-copy > *', '.clock-copy > *', '.more h2', '.more-grid > article', '.paths h2', '.paths-grid > li', '.trust h2', '.trust-grid > div', '.plans', '.doc-head > *'];
+  var groups = ['.row-copy > *', '.clock-copy > *', '.more h2', '.more-grid > article', '.paths h2', '.paths-grid > li', '.cost-head > *', '.cost-grid > li', '.cost-note', '.trust h2', '.trust-grid > div', '.finale .wrap > *', '.pro-grid > *', '.doc-head > *'];
   var items = [];
   groups.forEach(function (sel) {
     document.querySelectorAll(sel).forEach(function (el) { el.setAttribute('data-reveal', ''); el.style.setProperty('--i', Array.prototype.indexOf.call(el.parentNode.children, el)); items.push(el); });

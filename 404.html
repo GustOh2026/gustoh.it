@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pagina non trovata — GustOH</title>
-<meta name="description" content="Ricette spiegate passo passo, la settimana dei pasti, la lista della spesa e la dispensa: la cucina all'italiana in un'unica app.">
+<meta name="description" content="Cosa cucino? Cosa compro? A che ora inizio? Ricette di casa spiegate passo passo, la spesa che si scrive da sola e l'ora giusta per accendere il fuoco, in un'unica app.">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#fbf7ef" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#17120e" media="(prefers-color-scheme: dark)">
@@ -24,6 +24,7 @@
       <a class="opt" href="privacy.html">Privacy</a>
       <a class="opt" href="termini.html">Termini</a>
       <a class="lang" href="en/index.html" hreflang="en" lang="en">English</a>
+      
     </nav>
   </div>
 </header>
@@ -72,13 +73,44 @@
   </div>
 </footer>
 <script>
-/* Effetti di scorrimento (nessun dato raccolto, nessun servizio esterno): segna gli elementi da far comparire
-   e li mostra quando entrano nello schermo. Senza questo script il sito resta uguale, solo fermo. */
+/* Nessun dato raccolto, nessun servizio esterno. Senza questo script il sito resta uguale, solo fermo. */
 (function () {
+  /* Dimostrazione "a che ora inizio": scegli il piatto e l'ora in tavola, gli orari si ricalcolano. */
+  var demo = document.querySelector('[data-demo]');
+  if (demo) {
+    var dishes = JSON.parse(demo.getAttribute('data-demo'));
+    var say = demo.getAttribute('data-say').split('|');
+    var range = demo.querySelector('input[type=range]');
+    var list = demo.querySelector('ol');
+    var rows = list.querySelectorAll('li');
+    var outTable = demo.querySelector('[data-out=table]');
+    var outStart = demo.querySelector('[data-out=start]');
+    var dish = 0;
+    var hhmm = function (m) { m = ((m % 1440) + 1440) % 1440; var h = Math.floor(m / 60), n = m % 60; return (h < 10 ? '0' : '') + h + ':' + (n < 10 ? '0' : '') + n; };
+    var draw = function () {
+      var t = +range.value, steps = dishes[dish];
+      outTable.textContent = hhmm(t);
+      outStart.textContent = hhmm(t - steps[0][0]);
+      rows.forEach(function (li, i) { li.querySelector('time').textContent = hhmm(t - steps[i][0]); li.querySelector('span').textContent = steps[i][1]; });
+      range.setAttribute('aria-valuetext', say[0] + ' ' + hhmm(t) + ', ' + say[1] + ' ' + hhmm(t - steps[0][0]));
+      range.style.setProperty('--p', ((t - range.min) / (range.max - range.min)) * 100 + '%');
+    };
+    range.addEventListener('input', draw);
+    demo.querySelectorAll('input[type=radio]').forEach(function (r) {
+      r.addEventListener('change', function () { dish = +r.value; draw(); list.classList.remove('swap'); void list.offsetWidth; list.classList.add('swap'); });
+    });
+    demo.querySelectorAll('[data-step]').forEach(function (b) {
+      b.addEventListener('click', function () { range.value = +range.value + +b.getAttribute('data-step'); draw(); });
+    });
+    demo.classList.add('demo-on');
+    draw();
+  }
+
+  /* Effetti di scorrimento: segna gli elementi da far comparire e li mostra quando entrano nello schermo. */
   var d = document.documentElement;
   if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   d.classList.add('js');
-  var groups = ['.row-copy > *', '.clock-copy > *', '.more h2', '.more-grid > article', '.paths h2', '.paths-grid > li', '.trust h2', '.trust-grid > div', '.plans', '.doc-head > *'];
+  var groups = ['.row-copy > *', '.clock-copy > *', '.more h2', '.more-grid > article', '.paths h2', '.paths-grid > li', '.cost-head > *', '.cost-grid > li', '.cost-note', '.trust h2', '.trust-grid > div', '.finale .wrap > *', '.pro-grid > *', '.doc-head > *'];
   var items = [];
   groups.forEach(function (sel) {
     document.querySelectorAll(sel).forEach(function (el) { el.setAttribute('data-reveal', ''); el.style.setProperty('--i', Array.prototype.indexOf.call(el.parentNode.children, el)); items.push(el); });
