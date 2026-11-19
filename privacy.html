@@ -97,5 +97,26 @@
     <a href="en/privacy.html" hreflang="en" lang="en">English</a>
   </div>
 </footer>
+<script>
+/* Effetti di scorrimento (nessun dato raccolto, nessun servizio esterno): segna gli elementi da far comparire
+   e li mostra quando entrano nello schermo. Senza questo script il sito resta uguale, solo fermo. */
+(function () {
+  var d = document.documentElement;
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  d.classList.add('js');
+  var groups = ['.row-copy > *', '.clock-copy > *', '.more h2', '.more-grid > article', '.paths h2', '.paths-grid > li', '.trust h2', '.trust-grid > div', '.plans', '.doc-head > *'];
+  var items = [];
+  groups.forEach(function (sel) {
+    document.querySelectorAll(sel).forEach(function (el) { el.setAttribute('data-reveal', ''); el.style.setProperty('--i', Array.prototype.indexOf.call(el.parentNode.children, el)); items.push(el); });
+  });
+  document.querySelectorAll('.timeline li').forEach(function (el, i) { el.style.setProperty('--i', i); });
+  var timelines = document.querySelectorAll('.timeline');
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { rootMargin: '0px 0px -12% 0px', threshold: 0.15 });
+  items.forEach(function (el) { io.observe(el); });
+  timelines.forEach(function (el) { io.observe(el); });
+})();
+</script>
 </body>
 </html>
