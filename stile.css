@@ -371,3 +371,6 @@ p { margin: 0; }
     @keyframes head-shadow { to { box-shadow: 0 8px 24px -16px rgb(var(--shadow) / 0.35); } }
   }
 }
+
+/* funzione Premium: etichetta piccola e onesta accanto al testo */
+.tag-premium { display: inline-block; margin-left: 6px; padding: 2px 8px; border-radius: 999px; font: 600 12px/1.4 var(--sans); letter-spacing: 0.02em; color: var(--primary); background: var(--yolk-soft); border: 1px solid color-mix(in srgb, var(--yolk) 55%, transparent); vertical-align: 2px; white-space: nowrap; }
